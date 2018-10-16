@@ -1,15 +1,7 @@
+from pandas.io.json import json_normalize
+from urllib.request import urlopen
 import pandas as pd
 import json
-import urllib.parse
-import pandas as pd
-from pandas.io.json import json_normalize
-from bson import json_util
-from urllib.request import urlopen
-
-START_DATE = "2014-01-01"
-END_DATE = "2018-10-16"
-DATE_RANGE = pd.date_range(START_DATE, END_DATE).tolist()
-DATE_RANGE = [i.strftime("%Y-%m-%d") for i in DATE_RANGE]
 
 def getData(date):
     yy = date[0:4] 
