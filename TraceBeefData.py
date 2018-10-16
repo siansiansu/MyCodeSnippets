@@ -24,8 +24,13 @@ def getData(date):
     return df
 
 def main():
+    start = "2014-01-01"
+    end = "2018-10-16"
+    date_range = pd.date_range(start, end).tolist()
+    date_range = [i.strftime("%Y-%m-%d") for i in date_range]
+
     out = pd.DataFrame()
-    for i in DATE_RANGE:
+    for i in date_range:
         try:
             df = getData(i)
         except:
