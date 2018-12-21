@@ -1,2 +1,0 @@
-[localhost]
-alexsu ansible_connection=local
